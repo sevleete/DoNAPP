@@ -30,8 +30,8 @@ class _ListDetailState extends State<ListDetail> {
         ),
         body: const TabBarView(
             children: [
-              Center(child: Text('汽车')),
-              Center(child: Text('自行车'))
+              Center(child: Text('详情')),
+              Center(child: Text('报废与回收'))
             ]),
       ),
     );
