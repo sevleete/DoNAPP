@@ -21,7 +21,7 @@ class MyList extends StatefulWidget{
 }
 
 // 有状态控件，必须结合一个状态管理类来进行实现
-class _MyListState extends State<MyList>{
+class _MyListState extends State<MyList> with AutomaticKeepAliveClientMixin{
   final List partsImgList = [
     'images/parts/plate.png',
     'images/parts/blade.png',
@@ -55,9 +55,14 @@ class _MyListState extends State<MyList>{
     '数控立车',
     '数控镗床'
   ];
+
+  @override
+  bool get wantKeepAlive => true;
+
   // 渲染 MyList 控件的UI结构
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     // return Text('列表 --- ${widget.listTitle}');
     return WaterfallFlow.builder(
       padding: EdgeInsets.zero,
@@ -91,7 +96,7 @@ class _MyListState extends State<MyList>{
     return GestureDetector(
       onTap: (){
         Navigator.push(context, MaterialPageRoute(builder: (BuildContext ctx){
-          return ListDetail(title: imgName);
+          return ListDetail(title: imgName, imagePath: imgPath);
         }));
       },
       child: ClipRRect(
@@ -124,4 +129,5 @@ class _MyListState extends State<MyList>{
       ),
     );
   }
+
 }
