@@ -1,5 +1,7 @@
 // 导入控件
 import 'package:flutter/material.dart';
+// 导入设备管理页面
+import './pages/list.dart';
 
 // 入口函数
 void main() {
@@ -83,11 +85,21 @@ class MyHome extends StatelessWidget{
           child: const TabBar(
             labelStyle: TextStyle(height: 0,fontSize: 8), // 设置文本不占高度
             tabs: <Widget>[
-              Tab(icon: Icon(Icons.home), text: 'Tab1',),
-              Tab(icon: Icon(Icons.home), text: '主页',),
-              Tab(icon: Icon(Icons.home), text: 'Tab3',),
+              // 零件识别回收
+              Tab(icon: Icon(Icons.miscellaneous_services)),
+              // 设备管理
+              Tab(icon: Icon(Icons.home)),
+              // 成本评估
+              Tab(icon: Icon(Icons.analytics)),
             ],
           ),
+        ),
+        body: const TabBarView(
+          children: <Widget>[
+            MyList(listTitle: 'parts'),
+            MyList(listTitle: 'equipments'),
+            MyList(listTitle: 'equipment'),
+          ],
         ),
       ),
     );
