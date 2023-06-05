@@ -45,6 +45,8 @@ dependencies:
 
   waterfall_flow: ^3.0.2
 
+  flutter_hms_scan_kit: ^1.0.7
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -72,6 +74,7 @@ flutter:
   - images/user/
   - images/parts/
   - images/equipments/
+  - json/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -27,7 +27,8 @@ class _MyListState extends State<MyList> with AutomaticKeepAliveClientMixin{
     'images/parts/blade.png',
     'images/parts/cartridge_receiver.png',
     'images/parts/handle.png',
-    'images/parts/flange.png'
+    'images/parts/flange.png',
+    'images/parts/aluminium_alloy.png'
   ];
 
   final List partsNameList = [
@@ -35,25 +36,28 @@ class _MyListState extends State<MyList> with AutomaticKeepAliveClientMixin{
     '航空发动机叶片',
     '航空发动机机匣',
     '球形门把手',
-    '法兰盘'
+    '法兰盘',
+    '铝合金型材'
   ];
 
   final List equipmentsImgList = [
-    'images/equipments/five_axis.png',
-    'images/equipments/double_face.png',
-    'images/equipments/boring_mill.png',
-    'images/equipments/grinder.png',
-    'images/equipments/vertical_lathe.png',
-    'images/equipments/NC_boring_mill.png'
+    'images/equipments/lathe.jpg',
+    'images/equipments/milling_machine.jpg',
+    'images/equipments/polisher.jpg',
+    'images/equipments/NC_boring_mill.png',
+    'images/equipments/smelting_furnace.jpg',
+    'images/equipments/extruder.jpg',
+    'images/equipments/anodize.jpg'
   ];
 
   final List equipmentsNameList = [
-    '五轴联动车床',
-    '双面数控车床',
-    '卧式镗床',
-    '磨床',
-    '数控立车',
-    '数控镗床'
+    '车床',
+    '铣床',
+    '抛光机',
+    '数控镗床',
+    '金属熔炼炉',
+    '挤压机',
+    '阳极氧化设备'
   ];
 
   @override
@@ -74,7 +78,7 @@ class _MyListState extends State<MyList> with AutomaticKeepAliveClientMixin{
             ? LastChildLayoutType.foot
             : LastChildLayoutType.none,
       ),
-      itemCount: widget.listTitle == 'parts' ? 5 : 6,  // 瀑布流数量
+      itemCount: widget.listTitle == 'parts' ? 6 : 7,  // 瀑布流数量
       itemBuilder: (BuildContext context, int index) {
         // 返回瀑布流item子控件
         if (widget.listTitle == 'parts'){
@@ -96,7 +100,12 @@ class _MyListState extends State<MyList> with AutomaticKeepAliveClientMixin{
     return GestureDetector(
       onTap: (){
         Navigator.push(context, MaterialPageRoute(builder: (BuildContext ctx){
-          return ListDetail(title: imgName, imagePath: imgPath);
+          if (widget.listTitle == 'parts'){
+            return PartDetail(title: imgName, imagePath: imgPath, index: index);
+          }
+          else{
+            return EquipmentDetail(title: imgName, imagePath: imgPath, index: index);
+          }
         }));
       },
       child: ClipRRect(
