@@ -20,10 +20,10 @@ class PartDetail extends StatefulWidget {
 class _PartDetailState extends State<PartDetail> {
   final List partsChar = [
     [
-    "🔹构成：航空盘类零件包括高压涡轮盘、高压压气机盘、低压涡轮盘及低压压气机盘。盘类零件结构一般由轮缘、腹板、轮毂、封严篦齿等组成",
-    "🔹材料准备：航空发动机盘类部件主要采用高温合金、钛合金等材料",
-    "🔹加工难点：材料难加工、尺寸精度高、表面质量要求严格、壁薄易变性，因此加工难度较大、尺寸精度和技术要求难以保证",
-    "🔹加工部位：包括内外圆、前后端面、腹板、篦齿和榫槽等"
+      "🔹构成：航空盘类零件包括高压涡轮盘、高压压气机盘、低压涡轮盘及低压压气机盘。盘类零件结构一般由轮缘、腹板、轮毂、封严篦齿等组成",
+      "🔹材料准备：航空发动机盘类部件主要采用高温合金、钛合金等材料",
+      "🔹加工难点：材料难加工、尺寸精度高、表面质量要求严格、壁薄易变性，因此加工难度较大、尺寸精度和技术要求难以保证",
+      "🔹加工部位：包括内外圆、前后端面、腹板、篦齿和榫槽等"
     ], [
       "🔹构成：航空盘类零件包括高压涡轮盘、高压压气机盘、低压涡轮盘及低压压气机盘。盘类零件结构一般由轮缘、腹板、轮毂、封严篦齿等组成",
       "🔹材料准备：航空发动机盘类部件主要采用高温合金、钛合金等材料",
@@ -38,7 +38,7 @@ class _PartDetailState extends State<PartDetail> {
       "🔹材料准备：选择合适的材料进行加工，通常球形门锁把手使用不锈钢、铝合金等金属材料制作，需要对材料进行切割和切削等预处理",
       "🔹加工：根据模型，使用数控机床等设备对材料进行切削、铣削、打孔、磨削等加工工艺，将材料加工成为门锁把手的形状",
       "🔹表面处理：将加工好的门锁把手用自动抛光机进行打磨、抛光等表面处理工艺，使其表面光滑、美观，提高其耐腐蚀性和耐磨性",
-      "🔹表面处理：将加工好的门锁把手用自动抛光机进行打磨、抛光等表面处理工艺，使其表面光滑、美观，提高其耐腐蚀性和耐磨性"
+      "🔹检验和组装：将加工好的门锁把手进行检验，包括尺寸、外观、强度等方面的检测，确保其质量符合标准要求。然后进行组装，将把手与门锁芯、门扣等配件组合起来，形成完整的门锁"
     ],[
     ],[
     ]
@@ -200,7 +200,7 @@ class _PartDetailState extends State<PartDetail> {
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.only(left: 10, right: 10),
-                      decoration: const BoxDecoration(border: Border(top: BorderSide(width: 2, color: Colors.black26))),
+                      decoration: const BoxDecoration(border: Border(top: BorderSide(width: 2, color: Colors.black12))),
                       child: const Text('零件报废原因:', style: TextStyle(fontSize: 20, color: Colors.orange)),
                     ),
                     Expanded(
@@ -221,7 +221,7 @@ class _PartDetailState extends State<PartDetail> {
                     Container(
                       width: double.infinity,
                       padding: const EdgeInsets.only(left: 10, right: 10),
-                      decoration: const BoxDecoration(border: Border(top: BorderSide(width: 2, color: Colors.black26))),
+                      decoration: const BoxDecoration(border: Border(top: BorderSide(width: 2, color: Colors.black12))),
                       child: const Text('零件回收:', style: TextStyle(fontSize: 20, color: Colors.orange)),
                     ),
                     Expanded(
@@ -367,7 +367,7 @@ class _EquipmentDetailState extends State<EquipmentDetail> {
             Container(
               width: double.infinity,
               padding: const EdgeInsets.only(left: 10, right: 10),
-              decoration: const BoxDecoration(border: Border(top: BorderSide(width: 2, color: Colors.black26))),
+              decoration: const BoxDecoration(border: Border(top: BorderSide(width: 2, color: Colors.black12))),
               child: const Text('设备注意事项:', style: TextStyle(fontSize: 20, color: Colors.orange)),
             ),
             Expanded(

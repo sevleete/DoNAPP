@@ -47,6 +47,8 @@ dependencies:
 
   flutter_hms_scan_kit: ^1.0.7
 
+  flutter_echart: ^2.0.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -74,6 +76,7 @@ flutter:
   - images/user/
   - images/parts/
   - images/equipments/
+  - images/particular/
   - json/
   #   - images/a_dot_ham.jpeg
 
